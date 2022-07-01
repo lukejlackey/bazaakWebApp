@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazaak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>BAZAAK</h1>
+    <div id="game">
+        <div id="scoreboard">
+            <div class="sb" id="p1sb">
+                <div class="turnLight" id="p1tl"></div>
+                <h2 id="p1Name">Player 1</h2>
+                <div class="scoreMeter">
+                    <h3 class="score" id="p1Score">0</h3>
+                </div>
+            </div>
+            <div class="sb" id="p2sb">
+                <div class="scoreMeter" >
+                    <h3 class="score" id="p2Score">0</h3>
+                </div>  
+                <h2 id="p2Name">Player 2</h2>
+                <div class="turnLight" id="p2tl"></div>
+            </div>
+        </div>
+        <div id="gameboard">
+            <ul class="roundWins" id="p1wins">
+                <li class="winLights" id="p1w1"></li>
+                <li class="winLights" id="p1w2"></li>
+                <li class="winLights" id="p1w3"></li>
+            </ul>
+            <div class="mainCards" id="p1mCards">
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+            </div>
+            <div class="mainCards" id="p2mCards">
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+                <div class="cardSlot"></div>
+            <ul class="roundWins" id="p2wins">
+                <li class="winLights" id="p2w1"></li>
+                <li class="winLights" id="p2w2"></li>
+                <li class="winLights" id="p2w3"></li>
+            </ul>
+        </div>
+        <div id="playerConsoles">
+            <div class="playerConsole" id="p1Console">
+                <h4>Player Hand</h4>
+                <div class="playerHand" id="p1Hand">
+                    <div class="handSlot">
+                        <div class="cardSlot"></div>
+                        <button class="flip"></button>
+                    </div>
+                    <div class="handSlot">
+                        <div class="cardSlot"></div>
+                        <button class="flip"></button>
+                    </div>
+                    <div class="handSlot">
+                        <div class="cardSlot"></div>
+                        <button class="flip"></button>
+                    </div>
+                    <div class="handSlot">
+                        <div class="cardSlot"></div>
+                        <button class="flip"></button>
+                    </div>
+                </div>
+                <div id="playerControls">
+                    <button class="playerCommand">End Turn</button>
+                    <button class="playerCommand">Stand</button>
+                    <button class="playerCommand">Forfeit</button>
+                </div>
+            </div>
+            <div class="playerConsole" id="p2Console">
+                <h4>Opponent Hand</h4>
+                <div class="playerHand" id="p2Hand">
+                    <div class="cardSlot"></div>
+                    <div class="cardSlot"></div>
+                    <div class="cardSlot"></div>
+                    <div class="cardSlot"></div>
+                </div>
+                <div>
+                    <h5>Opponent:</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="enemy">
+        <img src="" alt="">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
