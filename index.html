@@ -15,22 +15,26 @@
     <div id="game">
         <div id="scoreboard">
             <div class="sb" id="p1sb">
-                <div class="turnLight" id="p1tl"></div>
-                <h2 id="p1Name">Player 1</h2>
-                <div class="scoreMeter">
-                    <h3 class="score" id="p1Score">0</h3>
+                <div class="nameplate instrumentTrim" id="p1np">
+                    <div class="turnLight" id="p1tl"></div>
+                    <h2 class="instrument" id="p1Name">Player 1</h2>
+                </div>
+                <div class="scoreMeter instrumentTrim">
+                    <h3 class="score instrument" id="p1Score">0</h3>
                 </div>
             </div>
-            <div class="sb" id="p2sb">
-                <div class="scoreMeter" >
-                    <h3 class="score" id="p2Score">0</h3>
+            <div class="sb p2" id="p2sb">
+                <div class="nameplate instrumentTrim" id="p2np">
+                    <h2 class="instrument  p2text" id="p2Name">Player 2</h2>
+                    <div class="turnLight" id="p2tl"></div>
+                </div>
+                <div class="scoreMeter instrumentTrim" >
+                    <h3 class="score instrument p2text" id="p2Score">0</h3>
                 </div>  
-                <h2 id="p2Name">Player 2</h2>
-                <div class="turnLight" id="p2tl"></div>
             </div>
         </div>
         <div id="gameboard">
-            <ul class="roundWins" id="p1wins">
+            <ul class="roundWins instrumentTrim" id="p1wins">
                 <li class="winLights" id="p1w1"></li>
                 <li class="winLights" id="p1w2"></li>
                 <li class="winLights" id="p1w3"></li>
@@ -46,7 +50,7 @@
                 <div class="cardSlot"></div>
                 <div class="cardSlot"></div>
             </div>
-            <div class="mainCards" id="p2mCards">
+            <div class="mainCards p2" id="p2mCards">
                 <div class="cardSlot"></div>
                 <div class="cardSlot"></div>
                 <div class="cardSlot"></div>
@@ -56,7 +60,8 @@
                 <div class="cardSlot"></div>
                 <div class="cardSlot"></div>
                 <div class="cardSlot"></div>
-            <ul class="roundWins" id="p2wins">
+            </div>
+            <ul class="roundWins instrumentTrim p2" id="p2wins">
                 <li class="winLights" id="p2w1"></li>
                 <li class="winLights" id="p2w2"></li>
                 <li class="winLights" id="p2w3"></li>
@@ -64,23 +69,25 @@
         </div>
         <div id="playerConsoles">
             <div class="playerConsole" id="p1Console">
-                <h4>Player Hand</h4>
+                <div class="handTrim instrumentTrim">
+                    <h4 class="instrument">Player Hand</h4>
+                </div>
                 <div class="playerHand" id="p1Hand">
                     <div class="handSlot">
                         <div class="cardSlot"></div>
-                        <button class="flip"></button>
+                        <button class="flip"><img src="./assets/switch-icon.jpg" alt="switch icon"></button>
                     </div>
                     <div class="handSlot">
                         <div class="cardSlot"></div>
-                        <button class="flip"></button>
+                        <button class="flip"><img src="./assets/switch-icon.jpg" alt="switch icon"></button>
                     </div>
                     <div class="handSlot">
                         <div class="cardSlot"></div>
-                        <button class="flip"></button>
+                        <button class="flip"><img src="./assets/switch-icon.jpg" alt="switch icon"></button>
                     </div>
                     <div class="handSlot">
                         <div class="cardSlot"></div>
-                        <button class="flip"></button>
+                        <button class="flip"><img src="./assets/switch-icon.jpg" alt="switch icon"></button>
                     </div>
                 </div>
                 <div id="playerControls">
@@ -89,8 +96,10 @@
                     <button class="playerCommand">Forfeit</button>
                 </div>
             </div>
-            <div class="playerConsole" id="p2Console">
-                <h4>Opponent Hand</h4>
+            <div class="playerConsole p2" id="p2Console">
+                <div class="handTrim p2text instrumentTrim">
+                    <h4 class="instrument">Opponent Hand</h4>
+                </div>
                 <div class="playerHand" id="p2Hand">
                     <div class="cardSlot"></div>
                     <div class="cardSlot"></div>

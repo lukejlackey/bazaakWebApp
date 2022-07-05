@@ -7,55 +7,127 @@
 /* ----------------------GENERAL-------------------------------------------------------------------------------------------------------------------------*/
 
 body {
-    padding: 75px;
+    padding: 2.5em 5em;
     background-image: url("assets/star-texture.png");
 }
 
 h1 {
-    font-size: 200px;
+    font-size: 18em;
     color: goldenrod;
     text-align: center;
 }
 
 h2 {
-    font-size: 100px;
-    color: white;
+    font-size: 4em;
+    height: 1.7em;
+    width: 8em;
+    background-color: #000000;
+    background: linear-gradient(0deg, rgba(62,62,62,1) 0%, rgba(0,0,0,1) 25%, rgba(62,62,62,1) 100%);
 }
 
 h3 {
-    height: 100px;
-    line-height: 100px;
-    width: 100px;
-    font-size:50px;
+    height: 100%;
+    width: 100%;
+    font-size: 4em;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    color:limegreen;
-    background: radial-gradient(circle, rgba(0,0,0,1) 25%, rgba(62,62,62,1) 100%);
     border-radius: 50%;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate
+    background: radial-gradient(circle, rgba(0,0,0,1) 25%, rgba(62,62,62,1) 100%);
 }
 
+h4 {
+    font-size: 3em;
+    height: 1.7em;
+    width: 100%;
+    background-color: #000000;
+    background: linear-gradient(0deg, rgba(62,62,62,1) 0%, rgba(0,0,0,1) 25%, rgba(62,62,62,1) 100%);
+}
 
+ul {
+    list-style: none;
+}
+
+li:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+.instrument {
+    border: .05em solid hsla(0, 0%, 0%, 0.684);
+    color:limegreen;
+    font-family: 'Orbitron', sans-serif;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.instrumentTrim {
+    background-image: url("./assets/panel-texture1.png");
+    border: .3em solid hsla(0, 0%, 0%, 0.416);
+    padding: .3em;
+}
+
+.p2 {
+    transform: scale(-1, 1);
+}
+
+.p2text {
+    transform: scale(-1, 1);
+}
+
+.cardSlot {
+    height: 15em;
+    width: 10em;
+    background-image: url("./assets/computer-texture-9.jpg");
+    background-size: contain;
+    box-shadow: 0em 0em 1em 1em black inset;
+    border: .5em solid transparent;
+    border-image: url(./assets/panel-texture1.png) 50 round;
+    outline: .2em solid rgba(0, 0, 0, 0.71);
+}
 
 /* ----------------------GAME----------------------------------------------------------------------------------------------------------------------------*/
 
 #game {
-    background-image: url("./assets/background-texture.jpg");
-    background-size:contain
+    background-image: url("./assets/panel-texture.png");
+    background-size: contain;
+    border: 5px solid hsl(0, 0%, 19%);
 }
 
 /* --------------------------------SCOREBOARD--------------------------------------------------------------------------------------------------*/
+
+#scoreboard {
+    padding: 4.4em;
+    background-image: url("./assets/sb-texture.jpg");
+    background-size: contain;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.388);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* ------------------------------------------PLAYER SCOREBOARDS----------------------------------------------------------------------*/
 
-.scoreMeter {
-    height: 115px;
-    width: 115px;
-    background-image: url("./assets/panel-texture.png");
-    border: 5px solid hsla(0, 0%, 0%, 0.363);
-    border-radius: 50%;
+.sb {
     display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.nameplate, #p1Name {
+    border-top-right-radius: 30%;
+}
+
+#p2Name {
+    border-top-left-radius: 30%;
+}
+
+.scoreMeter {
+    height: 8em;
+    width: 8em;
+    border-radius: 50%;
     justify-content: center;
     align-items: center;
 }
@@ -71,12 +143,131 @@ h3 {
     }
 }
 
-#p2sb > .scoreMeter {
-    transform: scale(-1, 1);
+/* --------------------------------GAMEBOARD---------------------------------------------------------------------------------------------------*/
+
+#gameboard {
+    display: flex;
+    justify-content: space-between;
+    background-image: url("./assets/3-7-17.jpg");
+    object-fit: cover;
+    box-shadow: 0em 0em 2em 2em black inset;
+    border: 1em solid transparent;
+    border-image: url(./assets/panel-texture1.png) 50 round;
+    outline: .5em solid #1D1F29;
+    margin: 4em;
+    padding: 4em;
 }
 
-/* --------------------------------GAMEBOARD---------------------------------------------------------------------------------------------------*/
 /* ------------------------------------------ROUND WINS------------------------------------------------------------------------------*/
+
+.roundWins {
+    height: fit-content;
+    padding: 1em;
+    gap: 1em;
+}
+
+.winLights {
+    height: 3em;
+    width: 3em;
+    border: .2em solid #252112;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,113,113,1) 35%, rgba(255,0,0,1) 100%);
+    -webkit-animation: pulse 1s ease-in-out infinite alternate;
+    -moz-animation: pulse 1s ease-in-out infinite alternate;
+    animation: pulse 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes pulse {
+    from {
+    box-shadow: 0 0 .1em .1em inset hsla(0, 0%, 100%, 0.47);
+    }
+    to {
+    box-shadow: 0 0 .2em .2em inset hsla(0, 0%, 100%, 0.47);
+    }
+}
+
 /* ------------------------------------------PLAYING FIELD---------------------------------------------------------------------------*/
+
+.mainCards {
+    display: grid;
+    gap: 3em;
+    grid-template-columns: repeat(3, 3fr);
+}
+
 /* --------------------------------------------------PLAYER CONSOLES---------------------------------------------------------------------------*/
+
+#playerConsoles {
+    display: flex;
+    justify-content: space-between;
+    background-image: url("./assets/3-7-17.jpg");
+    object-fit: cover;
+    box-shadow: 0em 0em 2em 2em black inset;
+    border: 1em solid transparent;
+    border-image: url(./assets/panel-texture1.png) 50 round;
+    outline: .5em solid #1D1F29;
+    margin: 4em;
+    padding: 4em;
+}
+
+.playerConsole {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+
+.handTrim {
+    width: 37em;
+}
+
+.handSlot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.playerHand {
+    display: flex;
+    gap: 2em;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flip {
+    height: 3em;
+    width: 10em;
+    border: .5em solid transparent;
+    border-image: url("./assets/panel-texture1.png") 50 round;
+    outline: .2em solid rgba(0, 0, 0, 0.71);
+    background: linear-gradient(0deg, rgba(255,113,113,1) 0%, rgba(255,0,0,1) 40%, rgba(255,113,113,1) 100%);
+    -webkit-animation: pulse 1s ease-in-out infinite alternate;
+    -moz-animation: pulse 1s ease-in-out infinite alternate;
+    animation: pulse 1s ease-in-out infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip img {
+    height: 1.5em;
+    width: 3em;
+    -webkit-animation: flipPulse 1s ease-in-out infinite alternate;
+    -moz-animation: flipPulse 1s ease-in-out infinite alternate;
+    animation: flipPulse 1s ease-in-out infinite alternate;
+} 
+
+@-webkit-keyframes flipPulse {
+    from {
+        filter: invert(100%);
+        -webkit-filter: invert(100%);
+    }
+    to {
+        filter: invert(100%) blur(.05em);
+        -webkit-filter: invert(100%) blur(.05em);
+
+    }
+}
+
 /* ----------------------ENEMY---------------------------------------------------------------------------------------------------------------------------*/
